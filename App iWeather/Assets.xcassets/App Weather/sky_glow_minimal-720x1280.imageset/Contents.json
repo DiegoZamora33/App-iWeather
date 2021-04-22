@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "sky_glow_minimal-720x1280.jpeg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

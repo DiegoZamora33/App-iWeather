@@ -16,6 +16,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var tempCity: UILabel!
     
     var isTouch = false
+    var myWeather = iWeatherManager()
     
     
     // MARK: - Action Conexiones
@@ -63,7 +64,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     /// * FUNCION PARA REALIZAR CONSULTA *
     func realizarConsulta(city: String)
     {
-        print("Find: \(city)")
+        myWeather.searchCity(city: city)
     }
     
     
@@ -91,7 +92,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     
-    /// End Editing
+    /// Should End Editing
     func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
         if inputCity.text! != ""
         {
@@ -112,6 +113,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    /// End Editing
     func textFieldDidEndEditing(_ textField: UITextField) {
         if isTouch == true
         {

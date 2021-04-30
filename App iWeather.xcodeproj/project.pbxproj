@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A413D0E6263899B300FBCF47 /* iWeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A413D0E5263899B300FBCF47 /* iWeatherData.swift */; };
 		A44F7CEF2631F70F006B3A48 /* iWeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44F7CEE2631F70F006B3A48 /* iWeatherManager.swift */; };
 		A4F19D90262F8031007FF7DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F19D8F262F8031007FF7DA /* AppDelegate.swift */; };
 		A4F19D92262F8031007FF7DA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F19D91262F8031007FF7DA /* SceneDelegate.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A413D0E5263899B300FBCF47 /* iWeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iWeatherData.swift; sourceTree = "<group>"; };
 		A44F7CEE2631F70F006B3A48 /* iWeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iWeatherManager.swift; sourceTree = "<group>"; };
 		A4F19D8C262F8031007FF7DA /* App iWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "App iWeather.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4F19D8F262F8031007FF7DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				A4F19D9A262F8032007FF7DA /* LaunchScreen.storyboard */,
 				A4F19D9D262F8033007FF7DA /* Info.plist */,
 				A44F7CEE2631F70F006B3A48 /* iWeatherManager.swift */,
+				A413D0E5263899B300FBCF47 /* iWeatherData.swift */,
 			);
 			path = "App iWeather";
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 			files = (
 				A44F7CEF2631F70F006B3A48 /* iWeatherManager.swift in Sources */,
 				A4F19D94262F8031007FF7DA /* ViewController.swift in Sources */,
+				A413D0E6263899B300FBCF47 /* iWeatherData.swift in Sources */,
 				A4F19D90262F8031007FF7DA /* AppDelegate.swift in Sources */,
 				A4F19D92262F8031007FF7DA /* SceneDelegate.swift in Sources */,
 			);

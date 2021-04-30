@@ -6,14 +6,30 @@
 //
 
 import Foundation
+import CoreLocation
+
+protocol iWeatherDelegate {
+    func getWeather(weatherData: iWeatherData?, httpResponse: URLResponse?, error: Error?)
+}
 
 class iWeatherManager {
-    private let apiURL = "https://api.openweathermap.org/data/2.5/weather?appid=43c02b88939bc65afefdef7ff3b31822&q="
+    private let apiURL = "https://api.openweathermap.org/data/2.5/weather?appid=6870e1278a35d6d2aaacb45e5a6ace11&units=metric&lang=es&"
     
-    // MARK: - Search City
+    /// Delegate
+    var delegate: iWeatherDelegate?
+    
+    
+    // MARK: - Search Name City
     public func searchCity(city: String) {
-        let myURL = "\(apiURL)\(city)"
+        let myURL = "\(apiURL)q=\(city)"
         
+        executeRequest(url: myURL)
+    }
+    
+    // MARK: - Search Coordenadas City
+    public func searchCity(lat: CLLocationDegrees, lon: CLLocationDegrees) {
+        let myURL = "\(apiURL)lat=\(lat)&lon=\(lon)"
+        print(myURL)
         executeRequest(url: myURL)
     }
     
@@ -39,21 +55,24 @@ class iWeatherManager {
     // MARK: - Response
     private func response(data: Data?, response: URLResponse?, error: Error?)
     {
-        if error != nil
-        {
-            print("Error al obtener los datos -> \(error!)")
-        }
-        else
-        {
-            if let secureRsponse = response
-            {
-                print("Respuesta: \(secureRsponse)")
-            }
+        /// Send Data pipe Delegate
+        delegate?.getWeather(weatherData: dataToObject(data: data), httpResponse: response, error: error)
+    }
+    
+    // MARK: - Data to Object
+    private func dataToObject(data: Data?) -> iWeatherData?
+    {
+        /// Crear un Decadificador JSON
+        let decodificador = JSONDecoder()
+        
+        do {
+            let decodeData = try decodificador.decode(iWeatherData.self, from: data!)
             
-            if let secureData = data {
-                let stringData = String(data: secureData, encoding: .utf8)
-                print(stringData!)
-            }
+            /// Mi Objeto con los datos
+            return decodeData
+            
+        } catch {
+            return nil
         }
     }
 }

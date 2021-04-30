@@ -1,7 +1,27 @@
 {
   "images" : [
     {
+      "filename" : "lowSKYX-1.jpg",
+      "idiom" : "universal"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "light"
+        }
+      ],
       "filename" : "lowSKYX.jpg",
+      "idiom" : "universal"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "filename" : "minimalizm-nebo-oblaka.jpeg",
       "idiom" : "universal"
     }
   ],

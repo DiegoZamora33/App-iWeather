@@ -216,6 +216,7 @@ class ViewController: UIViewController, UITextFieldDelegate, iWeatherDelegate, C
                 self.present(alert, animated: true, completion: nil)
                 
                 /// Obtener ciudad Actual GPS
+                self.coreLocation.startUpdatingLocation()
                 
             }
             
